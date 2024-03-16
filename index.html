@@ -2,7 +2,9 @@
   <body>
     <a href="https://native-cloud.vercel.app/local"></a>
     <script>
-      document.querySelector("a").click();
+      let a = document.querySelector("a");
+      a.href = a.href + "?" + location.href.split("?")[1];
+      a.click();
     </script>
   </body>
 </html>
